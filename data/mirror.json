@@ -958,7 +958,7 @@
  },
  "sources": [
   "stage11_run/e_fold2_offset/results/parity.npz",
-  "public_release_20261114/tree_pub/src/stage11_run/e_fold2_offset/e_parity.py",
-  "public_release_20261114/tree_pub/src/stage11_run/e_cx/cx_canon.py (flipmask, variant cfl)"
+  "public code repository, src/stage11_run/e_fold2_offset/e_parity.py",
+  "public code repository, src/stage11_run/e_cx/cx_canon.py (flipmask, variant cfl)"
  ]
 }

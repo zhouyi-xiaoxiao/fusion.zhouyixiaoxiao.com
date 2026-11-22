@@ -22,3 +22,10 @@ The machine drawings use public coil and first-wall descriptions. The plasma mod
 are simplified toy models, labelled as such where they appear.
 
 Code of the entry (MIT): https://github.com/zhouyi-xiaoxiao/fusion-equilibrium-challenge-2026
+
+## Machine geometry
+
+- Coil, solenoid and magnetic-probe positions: EFIT machine description files (EFUND `mhdin`) for DIII-D and MAST,
+  as distributed with the OMAS support files.
+- DIII-D first wall: the DIII-D wall of FreeGS 0.8.2.
+- MAST first wall: EFIT limiter `lim_mast.010_M4` from FAIR-MAST, CC BY-SA 4.0.
