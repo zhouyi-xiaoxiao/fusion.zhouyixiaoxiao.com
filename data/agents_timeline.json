@@ -1,0 +1,689 @@
+{
+ "version": 1,
+ "about": "Timeline of the project behind the talk, end of August to late October 2026, for the scene How it was built and the closing scene. Times are UTC. An entry with schematic true has a real date but an hour placed by rule, not read from a record. Scores are composite S values from the official scorer; local means our own held-out DIII-D shots; dev rows are the 22 Development uploads and final the 3 Final uploads.",
+ "licence": "Facts compiled from the speaker's own project records; no challenge data is included. Reuse with attribution, on the same terms as the talk site.",
+ "generated_from": "the submission log, the methods report, the project history report, the experiment result notes of 31 August, the compliance audit notes, the dated review records, the handoff file, the track notes and the running log of the third Final file, all parsed by the data preparation script of the talk",
+ "schematic_rule": "k schematic entries of one day are spread evenly over 08:00 to 22:00 UTC; reviews sit at 12:00",
+ "local": [
+  {
+   "t": "2026-08-31T09:10:00Z",
+   "S": 0.3322,
+   "schematic": true
+  },
+  {
+   "t": "2026-08-31T13:50:00Z",
+   "S": 0.9668,
+   "schematic": true
+  },
+  {
+   "t": "2026-09-01T15:00:00Z",
+   "S": 0.9834,
+   "schematic": true
+  },
+  {
+   "t": "2026-09-02T18:30:00Z",
+   "S": 0.9922,
+   "schematic": true
+  }
+ ],
+ "dev": [
+  {
+   "n": 1,
+   "t": "2026-10-11T16:44:00Z",
+   "d3d": 0.991371,
+   "mast": null,
+   "onBoard": true
+  },
+  {
+   "n": 2,
+   "t": "2026-10-11T18:39:00Z",
+   "d3d": 0.991371,
+   "mast": 0.4726,
+   "onBoard": true
+  },
+  {
+   "n": 3,
+   "t": "2026-10-11T19:04:00Z",
+   "d3d": 0.991843,
+   "mast": 0.4732,
+   "onBoard": true
+  },
+  {
+   "n": 4,
+   "t": "2026-10-11T19:16:00Z",
+   "d3d": null,
+   "mast": 0.4272,
+   "onBoard": true
+  },
+  {
+   "n": 5,
+   "t": "2026-10-11T19:17:00Z",
+   "d3d": 0.991843,
+   "mast": 0.4144,
+   "onBoard": true
+  },
+  {
+   "n": 6,
+   "t": "2026-10-12T16:35:46Z",
+   "d3d": 0.996599,
+   "mast": 0.662324,
+   "onBoard": true
+  },
+  {
+   "n": 7,
+   "t": "2026-10-12T16:36:52Z",
+   "d3d": 0.996599,
+   "mast": 0.66193,
+   "onBoard": true
+  },
+  {
+   "n": 8,
+   "t": "2026-10-12T16:54:59Z",
+   "d3d": 0.996854,
+   "mast": 0.662324,
+   "onBoard": true,
+   "fix": "reversed shots"
+  },
+  {
+   "n": 9,
+   "t": "2026-10-12T17:51:30Z",
+   "d3d": 0.996854,
+   "mast": 0.66636,
+   "onBoard": true
+  },
+  {
+   "n": 10,
+   "t": "2026-10-12T20:25:39Z",
+   "d3d": 0.996965,
+   "mast": 0.689974,
+   "onBoard": true
+  },
+  {
+   "n": 11,
+   "t": "2026-10-13T00:01:34Z",
+   "d3d": 0.996965,
+   "mast": 0.7106,
+   "onBoard": true
+  },
+  {
+   "n": 12,
+   "t": "2026-10-13T03:50:13Z",
+   "d3d": 0.996965,
+   "mast": 0.7315,
+   "onBoard": true
+  },
+  {
+   "n": 13,
+   "t": "2026-10-13T09:58:51Z",
+   "d3d": 0.996965,
+   "mast": 0.7512,
+   "onBoard": true
+  },
+  {
+   "n": 14,
+   "t": "2026-10-13T10:29:23Z",
+   "d3d": 0.996998,
+   "mast": 0.66,
+   "onBoard": true
+  },
+  {
+   "n": 15,
+   "t": "2026-10-13T12:28:00Z",
+   "d3d": 0.996998,
+   "mast": 0.7569,
+   "onBoard": false
+  },
+  {
+   "n": 16,
+   "t": "2026-10-14T11:40:32Z",
+   "d3d": 0.996998,
+   "mast": 0.7547,
+   "onBoard": true
+  },
+  {
+   "n": 17,
+   "t": "2026-10-14T13:36:31Z",
+   "d3d": 0.996998,
+   "mast": 0.7601,
+   "onBoard": true
+  },
+  {
+   "n": 18,
+   "t": "2026-10-14T14:23:11Z",
+   "d3d": 0.996998,
+   "mast": 0.7529,
+   "onBoard": true
+  },
+  {
+   "n": 19,
+   "t": "2026-10-14T15:37:07Z",
+   "d3d": 0.996998,
+   "mast": 0.7555,
+   "onBoard": true
+  },
+  {
+   "n": 20,
+   "t": "2026-10-14T17:02:54Z",
+   "d3d": 0.996998,
+   "mast": 0.7578,
+   "onBoard": true
+  },
+  {
+   "n": 21,
+   "t": "2026-10-17T20:52:31Z",
+   "d3d": 0.996998,
+   "mast": 0.7601,
+   "onBoard": true
+  },
+  {
+   "n": 22,
+   "t": "2026-10-17T22:43:20Z",
+   "d3d": 0.996998,
+   "mast": 0.7607,
+   "onBoard": true
+  }
+ ],
+ "final": [
+  {
+   "n": 1,
+   "t": "2026-10-19T08:34:02Z"
+  },
+  {
+   "n": 2,
+   "t": "2026-10-19T19:38:30Z"
+  },
+  {
+   "n": 3,
+   "t": "2026-10-21T01:50:22Z"
+  }
+ ],
+ "finalResult": {
+  "d3d": 0.997253,
+  "mast": 0.761,
+  "ch1": 2
+ },
+ "rounds": [
+  {
+   "t": "2026-08-31T09:10:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-08-31T11:30:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-08-31T13:50:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-08-31T16:10:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-08-31T18:30:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-08-31T20:50:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-09-01T15:00:00Z",
+   "focus": true,
+   "schematic": true
+  },
+  {
+   "t": "2026-09-02T11:30:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-09-02T18:30:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-09-08T15:00:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-11T15:00:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-12T08:42:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-12T10:06:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-12T11:30:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-12T12:54:00Z",
+   "focus": false,
+   "schematic": true,
+   "found": [
+    "reversed shots",
+    "clock rule"
+   ]
+  },
+  {
+   "t": "2026-10-12T14:18:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-12T15:42:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-12T17:06:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-12T18:30:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-12T19:54:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-12T21:18:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-13T09:45:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-13T13:15:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-13T16:45:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-13T20:15:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-14T10:20:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-14T15:00:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-14T19:40:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-15T11:30:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-15T18:30:00Z",
+   "focus": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-17T21:20:00Z",
+   "focus": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-19T17:25:00Z",
+   "focus": false,
+   "schematic": false
+  }
+ ],
+ "reviews": [
+  {
+   "t": "2026-10-11T12:00:00Z",
+   "schematic": true,
+   "findings": [
+    {
+     "in": "loss",
+     "errors": 1
+    },
+    {
+     "in": "MAST design",
+     "errors": 3
+    }
+   ]
+  },
+  {
+   "t": "2026-10-12T12:00:00Z",
+   "schematic": true,
+   "findings": null
+  },
+  {
+   "t": "2026-10-13T12:00:00Z",
+   "schematic": true,
+   "findings": null
+  }
+ ],
+ "audits": [
+  {
+   "t": "2026-10-11T19:45:00Z",
+   "block": false,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-11T22:50:00Z",
+   "block": true,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-12T05:52:00Z",
+   "block": true,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-12T07:25:00Z",
+   "block": true,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-12T08:10:00Z",
+   "block": true,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-12T16:55:00Z",
+   "block": true,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-12T18:55:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-12T20:20:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-12T20:20:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-12T20:24:00Z",
+   "block": true,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-12T20:25:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-12T20:25:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-12T23:30:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-13T00:25:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-13T00:25:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-13T00:35:00Z",
+   "block": true,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-13T01:30:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-13T01:33:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-13T01:37:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-13T01:50:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-13T03:48:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-13T03:48:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-13T03:48:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-13T12:20:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-13T12:35:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-14T12:40:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-14T12:40:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-14T12:58:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-14T13:00:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-14T13:35:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-14T14:05:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-14T15:30:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-14T15:58:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-17T22:25:00Z",
+   "block": false,
+   "schematic": false
+  },
+  {
+   "t": "2026-10-17T22:52:00Z",
+   "block": false,
+   "schematic": false
+  }
+ ],
+ "blocks": [
+  {
+   "t": "2026-10-11T23:00:00Z",
+   "text": "constant fitted to the board (withdrawn)",
+   "schematic": false
+  },
+  {
+   "t": "2026-10-12T05:52:00Z",
+   "text": "q95 rescale pair (kept off the board)",
+   "schematic": true
+  },
+  {
+   "t": "2026-10-12T07:25:00Z",
+   "text": "surrogate without the label guard (not compliant)",
+   "schematic": false
+  },
+  {
+   "t": "2026-10-12T08:10:00Z",
+   "text": "Final blockers in the inverse (changed)",
+   "schematic": false
+  },
+  {
+   "t": "2026-10-12T16:55:00Z",
+   "text": "q95 rescale of an uploaded file (changed)",
+   "schematic": false
+  },
+  {
+   "t": "2026-10-12T20:24:00Z",
+   "text": "edge datum moved on 19% of frames (no board slot)",
+   "schematic": false
+  },
+  {
+   "t": "2026-10-13T00:35:00Z",
+   "text": "wiring module not a no-op (not adopted)",
+   "schematic": false
+  }
+ ],
+ "round1": {
+  "base": 0.9668,
+  "variants": [
+   {
+    "name": "conv decoder",
+    "S": 0.9754,
+    "kept": false
+   },
+   {
+    "name": "loss sweep",
+    "S": 0.9766,
+    "kept": false
+   },
+   {
+    "name": "U-Net refiner",
+    "S": 0.9608,
+    "kept": false
+   },
+   {
+    "name": "bag of 5 seeds",
+    "S": 0.9834,
+    "kept": true
+   }
+  ]
+ },
+ "failures": [
+  {
+   "t": "2026-08-31T16:10:00Z",
+   "badge": 1,
+   "schematic": true
+  },
+  {
+   "t": "2026-08-31T18:30:00Z",
+   "badge": 2,
+   "schematic": true
+  },
+  {
+   "t": "2026-10-12T16:35:46Z",
+   "badge": 3,
+   "schematic": false
+  }
+ ],
+ "deaths": [
+  {
+   "t": "2026-10-12T19:40:00Z"
+  },
+  {
+   "t": "2026-10-12T22:45:00Z"
+  },
+  {
+   "t": "2026-10-13T05:08:00Z"
+  },
+  {
+   "t": "2026-10-13T12:28:00Z"
+  }
+ ],
+ "restarts": [
+  {
+   "t": "2026-10-12T20:05:00Z",
+   "after": 0
+  },
+  {
+   "t": "2026-10-12T22:55:00Z",
+   "after": 1
+  },
+  {
+   "t": "2026-10-13T10:00:00Z",
+   "after": 2
+  },
+  {
+   "t": "2026-10-14T11:35:00Z",
+   "after": 3
+  },
+  {
+   "t": "2026-10-17T20:55:00Z",
+   "after": null
+  }
+ ]
+}

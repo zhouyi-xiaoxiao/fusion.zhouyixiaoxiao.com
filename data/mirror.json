@@ -7,10 +7,10 @@
  "kept_raw_flag": "v1_sign_ip (odd, but left unflipped so the network still sees the raw sign)",
  "sign_column": "time_sign_ip_shot",
  "mirror_definition": "negate magnetics_ECOILA, F1A..F9B, magnetics_plasma_current and magnetics_bcoil; Thomson, times unchanged",
- "parity_test": "e_parity.py: features of the mirrored raw row vs the original on 80 training shots (20 per Ip sign x DAQ era); max |Y+X|/max|X| <= 1e-5 -> odd, max |Y-X|/max|X| <= 1e-5 -> even; every column was exactly one of the two",
+ "parity_test": "features of the mirrored raw row vs the original on 80 training shots (20 per Ip sign x DAQ era); max |Y+X|/max|X| <= 1e-5 -> odd, max |Y-X|/max|X| <= 1e-5 -> even; every column was exactly one of the two",
  "parity_test_current_only": {
   "n_odd": 397,
-  "note": "same test with bcoil NOT negated (variant ccl, not shipped)"
+  "note": "same test with bcoil NOT negated (a variant that was not shipped)"
  },
  "groups": [
   {
@@ -954,11 +954,11 @@
   "n_reversed_ip": 603,
   "n_normal_ip": 6438,
   "fraction_reversed": 0.08564124414145718,
-  "source": "stage11_run/ch1d_fold2/results/meta_all.npz (ip_sign from the shipped Ip trace)"
+  "source": "computed from the shipped Ip trace for all 7,041 labelled training shots"
  },
  "sources": [
-  "stage11_run/e_fold2_offset/results/parity.npz",
-  "public code repository, src/stage11_run/e_fold2_offset/e_parity.py",
-  "public code repository, src/stage11_run/e_cx/cx_canon.py (flipmask, variant cfl)"
+  "computed from the parity test over 80 training shots, 20 per Ip sign and DAQ era",
+  "computed with the parity-test code in the public code repository",
+  "computed with the shipped canonicalisation flip mask in the public code repository"
  ]
 }
