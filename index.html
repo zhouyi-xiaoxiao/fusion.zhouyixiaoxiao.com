@@ -10,10 +10,22 @@
     <link rel="stylesheet" href="./app.css" />
     <style>
       html, body { margin: 0; height: 100%; background: #06070c; color: #f3f1ea; }
+      #m-hint { display: none; }
+      @media (orientation: portrait) and (max-width: 700px) {
+        #m-hint { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; gap: 14px; align-items: flex-start;
+          padding: 14px 16px calc(14px + env(safe-area-inset-bottom)); background: rgba(12, 14, 22, 0.96);
+          border-top: 1px solid rgba(243, 241, 234, 0.2); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color: #f3f1ea; }
+        #m-hint b { font-weight: 600; }
+        #m-hint button { flex: none; width: 32px; height: 32px; margin: -4px -6px 0 0; border: 0; background: none; color: #d2cfc6; font: 22px/1 system-ui; cursor: pointer; }
+      }
     </style>
   </head>
   <body>
     <div id="app"></div>
+    <div id="m-hint" role="note">
+      <span><b>Built for a wide screen.</b> Turn your phone sideways for the full view, then swipe left to move through the talk. A phone version is on its way.</span>
+      <button type="button" aria-label="Dismiss" onclick="this.parentNode.remove()">&times;</button>
+    </div>
     <noscript>
       <p style="font: 18px/1.5 system-ui; max-width: 40em; margin: 4em auto; padding: 0 1em">
         This talk is an interactive page and needs JavaScript. The method is described in the report linked from
