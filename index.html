@@ -5,47 +5,227 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="robots" content="noindex" />
     <meta name="theme-color" content="#06070c" />
-    <link rel="icon" href="data:," />
     <title>Pixel-perfect was not enough · Xiaoxiao Zhouyi · FusionEC-26</title>
     <meta name="description" content="An interactive talk: score-aware flux-map regression on DIII-D, a physics inverse for MAST, and how one student worked with AI agents. NeurIPS 2026 Fusion Equilibrium Challenge, 2nd in Challenge 1." />
+    <script id="view-gate">
+      // View gate (SPEC 2.1), decided once per load, before first paint. Sets <html data-view="deck|reader|presenter">
+      // and, for the reader, class "reader". When in doubt it chooses the deck. The next line is the kill switch.
+      (function () {
+        var READER_ENABLED = true;
+        var root = document.documentElement;
+        var view = 'deck';
+        try {
+          var q = new URLSearchParams(location.search);
+          var mm = function (s) { return !!(window.matchMedia && window.matchMedia(s).matches); };
+          // A phone-sized screen is a phone even when it also reports a fine pointer (a stylus phone, a paired mouse).
+          var phone = function () {
+            try { var m = Math.min(window.screen.width, window.screen.height); return m > 0 && m < 600; } catch (e) { return false; }
+          };
+          var clock = function () {
+            try {
+              var t = JSON.parse(sessionStorage.getItem('fusion-talk-timer') || 'null');
+              return !!(t && (t.running || t.acc > 0));
+            } catch (e) { return false; }
+          };
+          if (q.has('presenter')) view = 'presenter';
+          else if (q.get('print') === '1') view = 'deck';
+          else if (q.get('view') === 'deck') view = 'deck';
+          else if (q.get('view') === 'reader') view = READER_ENABLED ? 'reader' : 'deck';
+          else if (location.protocol === 'file:') view = 'deck';
+          else if (clock()) view = 'deck';
+          else if (!READER_ENABLED) view = 'deck';
+          else if (mm('(pointer: coarse)') && mm('(hover: none)') && (!mm('(any-pointer: fine)') || phone())) view = 'reader';
+        } catch (e) {
+          view = 'deck';
+        }
+        root.setAttribute('data-view', view);
+        if (view === 'reader') {
+          root.classList.add('reader');
+          // window height at load, for the first-paint window height (#rd-first); toolbar changes are ignored
+          if (window.innerHeight > 200) root.style.setProperty('--rd-ih', window.innerHeight + 'px');
+          if (window.innerWidth > 200) root.style.setProperty('--rd-iw', window.innerWidth + 'px');
+        }
+      })();
+    </script>
     <script>
       let mode = 'dark';
       try { const q = new URLSearchParams(location.search); if (q.has('bright')) mode = q.get('bright') === '0' ? 'dark' : 'bright'; else if (q.has('room')) mode = q.get('room') === 'bright' ? 'bright' : 'dark'; else { const s = localStorage.getItem('fusion-talk-mode'); if (s === 'bright' || s === 'dark') mode = s; } } catch {}
       document.documentElement.dataset.mode = mode;
     </script>
-    <link rel="stylesheet" href="./app.css" />
+    <link rel="canonical" href="https://fusion.zhouyixiaoxiao.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Xiaoxiao Zhouyi" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:url" content="https://fusion.zhouyixiaoxiao.com/" />
+    <meta property="og:title" content="Pixel-perfect was not enough" />
+    <meta property="og:description" content="An interactive talk: score-aware flux-map regression on DIII-D, a physics inverse for MAST, and how one student worked with AI agents. NeurIPS 2026 Fusion Equilibrium Challenge, 2nd in Challenge 1." />
+    <meta property="og:image" content="https://fusion.zhouyixiaoxiao.com/og.jpg" />
+    <meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Title screen of the talk Pixel-perfect was not enough: an illustration of the DIII-D tokamak, 2nd in Challenge 1, Xiaoxiao Zhouyi, University of Bristol." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="author" content="Xiaoxiao Zhouyi" />
+    <link rel="author" href="https://zhouyixiaoxiao.com" />
+    <link rel="me" href="https://zhouyixiaoxiao.com" />
+    <link rel="me" href="https://www.linkedin.com/in/zhouyixiaoxiao/" />
+    <link rel="me" href="https://github.com/zhouyi-xiaoxiao" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="preload" as="image" href="./poster.jpg" media="(pointer: coarse)" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[
+ {"@type":"Person","@id":"https://zhouyixiaoxiao.com/#me","name":"Xiaoxiao Zhouyi","url":"https://zhouyixiaoxiao.com",
+  "affiliation":{"@type":"CollegeOrUniversity","name":"University of Bristol"},
+  "sameAs":["https://www.linkedin.com/in/zhouyixiaoxiao/","https://github.com/zhouyi-xiaoxiao"]},
+ {"@type":"PresentationDigitalDocument","name":"Pixel-perfect was not enough","url":"https://fusion.zhouyixiaoxiao.com/",
+  "inLanguage":"en-GB","description":"An interactive talk: score-aware flux-map regression on DIII-D, a physics inverse for MAST, and how one student worked with AI agents. NeurIPS 2026 Fusion Equilibrium Challenge, 2nd in Challenge 1.","image":"https://fusion.zhouyixiaoxiao.com/og.jpg",
+  "author":{"@id":"https://zhouyixiaoxiao.com/#me"},
+  "isBasedOn":{"@type":"SoftwareSourceCode","codeRepository":"https://github.com/zhouyi-xiaoxiao/fusion-equilibrium-challenge-2026","license":"https://opensource.org/licenses/MIT"}}]}</script>
+    <link rel="stylesheet" href="./app.css?v=ff8e9f41" />
     <style>
       html, body { margin: 0; height: 100%; background: #06070c; color: #f3f1ea; }
       html[data-mode="bright"], html[data-mode="bright"] body { background: #fbfaf6; color: #0b0c12; }
-      #m-hint { display: none; }
-      @media (orientation: portrait) and (max-width: 700px) {
-        #m-hint { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; gap: 14px; align-items: flex-start;
-          padding: 14px 16px calc(14px + env(safe-area-inset-bottom)); background: rgba(12, 14, 22, 0.96);
-          border-top: 1px solid rgba(243, 241, 234, 0.2); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color: #f3f1ea; }
-        #m-hint b { font-weight: 600; }
-        #m-hint button { flex: none; width: 32px; height: 32px; margin: -4px -6px 0 0; border: 0; background: none; color: #d2cfc6; font: 22px/1 system-ui; cursor: pointer; }
+    </style>
+    <style id="rd-first-css">
+      /* Reader first paint (#rd-first). Every selector starts with html.reader; without that class the block keeps its
+         hidden attribute (display: none) and nothing here applies. Tokens come from app.css (tokens.css). */
+      html.reader, html.reader body { overflow: visible; height: auto; overscroll-behavior: auto; -webkit-text-size-adjust: 100%; }
+      /* on the root, so the poster keeps them after the live reader adopts it: bar height, window width and height */
+      html.reader {
+        --rd-top: calc(44px + env(safe-area-inset-top, 0px));
+        --rd-bw: min(var(--rd-iw, 100vw), 720px);
+        --rd-bh: min(calc(0.93 * var(--rd-bw)), calc(0.5 * (var(--rd-ih, 100svh) - var(--rd-top))));
       }
+      html.reader { --rd-p-x0: 656; --rd-p-w: 944; --rd-p-y0: 0; --rd-p-h: 878.444; --rd-p-cy: 405.5; } /* POSTER-CROP: written by tools/og/make-assets.mjs */
+      html.reader #rd-first { display: block; }
+      html.reader #rd-first .rd-f-bar {
+        position: sticky; top: 0; z-index: 2; box-sizing: border-box; height: var(--rd-top);
+        padding: env(safe-area-inset-top, 0px) max(4px, env(safe-area-inset-right, 0px)) 0 max(4px, env(safe-area-inset-left, 0px));
+        display: flex; align-items: center; background: var(--bg); border-bottom: 1px solid var(--line, rgba(255, 255, 255, 0.12));
+      }
+      html.reader #rd-first .rd-f-bar button {
+        appearance: none; -webkit-appearance: none; margin: 0; border: 0; background: none; color: var(--ink2);
+        height: 44px; min-width: 44px; padding: 0; font: inherit; cursor: pointer;
+      }
+      html.reader #rd-first .rd-f-bar .rd-f-label {
+        display: flex; flex: 1 1 auto; align-items: center; gap: 4px; min-width: 0; text-align: left; padding: 0 2px 0 12px;
+        font: 500 13px/44px var(--font-mono); letter-spacing: -0.04em;
+      }
+      /* as the live bar (reader-ui.css .rd-label): the label ellipsis, then a small down chevron */
+      html.reader #rd-first .rd-f-label span { display: block; flex: 0 1 auto; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+      html.reader #rd-first .rd-f-label svg { flex: none; width: 12px; height: 12px; color: var(--ink3); }
+      @media (max-width: 374px) {
+        html.reader #rd-first .rd-f-bar .rd-f-label { gap: 3px; padding-right: 0; font-size: 12px; letter-spacing: -0.045em; }
+      }
+      html.reader #rd-first .rd-f-look { display: flex; align-items: center; justify-content: center; flex: none; }
+      html.reader #rd-first .rd-f-look svg { width: 20px; height: 20px; }
+      html.reader #rd-first .rd-f-xz { flex: none; display: flex; align-items: center; justify-content: center; }
+      html.reader #rd-first .rd-f-xz span {
+        display: block; width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--ink3); box-sizing: border-box;
+        font: 600 12px/27px var(--font-body); letter-spacing: 0.04em; text-align: center; color: var(--ink);
+      }
+      html.reader #rd-first .rd-f-win {
+        position: sticky; top: var(--rd-top); z-index: 1; box-sizing: border-box; overflow: hidden; overflow: clip;
+        width: min(100%, 720px); margin: 0 auto; aspect-ratio: 100 / 93; background: var(--bg);
+        max-height: calc(50svh - 22px); max-height: calc(0.5 * (var(--rd-ih, 100svh) - var(--rd-top)));
+      }
+      /* the live reader's rounding (reader.js computeGeom), so the takeover does not move the window by a fraction */
+      @supports (height: round(1.5px, 1px)) {
+        html.reader { --rd-bh: min(round(calc(0.93 * var(--rd-bw)), 1px), round(down, calc(0.5 * (var(--rd-ih, 100svh) - var(--rd-top))), 1px)); }
+        html.reader #rd-first .rd-f-win { aspect-ratio: auto; max-height: none; height: var(--rd-bh); }
+      }
+      html.reader #rd-first .rd-f-poster { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+      /* the poster's top edge in the window (CSS px): where the live camera puts the 1.1 rect (frame.js resolveRect:
+         width-governed, centre clamped to the stage's top and bottom), so the poster does not move at takeover; never a
+         gap at the window's edges. y = (poster top - shown top) * Ws / w. --rd-pk: one design px of the poster. */
+      html.reader {
+        --rd-p-top: min(max(
+          calc(var(--rd-bh) - var(--rd-bw) * (900 - var(--rd-p-y0)) / var(--rd-p-w)),
+          min(calc(var(--rd-bh) / 2 - var(--rd-bw) * (var(--rd-p-cy) - var(--rd-p-y0)) / var(--rd-p-w)), calc(var(--rd-bw) * var(--rd-p-y0) / var(--rd-p-w))),
+          calc(var(--rd-bh) - var(--rd-bw) * var(--rd-p-h) / var(--rd-p-w))), 0px);
+        --rd-pk: calc(var(--rd-bw) / var(--rd-p-w));
+        --rd-tu: max(var(--rd-pk), calc(12px / 22));
+      }
+      /* also after adoption (.rd-poster); the id in :is() outranks reader.css's copies */
+      html.reader :is(#rd-first, .rd-poster) .rd-f-poster { object-position: 50% var(--rd-p-top); }
+      /* the tag chip lies on the poster's own canvas tag (TAG_FULL, src/viz/tags.js: right edge x 1560, top y 39, 34
+         high): same right edge and centre, one line, the pill's proportions in units of max(k, 12/22 px), so its text is
+         12 px or the canvas size if larger; the qualifier ends in an ellipsis where the window is too narrow. Opaque. */
+      html.reader :is(#rd-first, .rd-poster) .rd-f-tag {
+        position: absolute; display: flex; align-items: center; box-sizing: border-box; white-space: nowrap;
+        right: calc(var(--rd-pk) * (var(--rd-p-x0) + var(--rd-p-w) - 1560));
+        top: calc(var(--rd-p-top) + var(--rd-pk) * (56 - var(--rd-p-y0)) - var(--rd-tu) * 17);
+        height: calc(var(--rd-tu) * 34); max-width: calc(100% - 8px - var(--rd-pk) * (var(--rd-p-x0) + var(--rd-p-w) - 1560));
+        padding: 0 calc(var(--rd-tu) * 12); border: 1px solid var(--plasma); border-radius: calc(var(--rd-tu) * 6);
+        background: var(--bg); font: 500 calc(var(--rd-tu) * 22)/1 var(--font-body); color: var(--ink2);
+      }
+      html.reader :is(#rd-first, .rd-poster) .rd-f-tag i {
+        flex: none; display: block; width: calc(var(--rd-tu) * 10); height: calc(var(--rd-tu) * 10);
+        margin: 0 calc(var(--rd-tu) * 10) 0 0; border-radius: 50%; box-shadow: inset 0 0 0 calc(var(--rd-tu) * 2) var(--plasma);
+      }
+      html.reader :is(#rd-first, .rd-poster) .rd-f-tag b { flex: none; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--plasma); }
+      html.reader :is(#rd-first, .rd-poster) .rd-f-tag span { min-width: 0; overflow: hidden; text-overflow: ellipsis; padding-left: calc(var(--rd-tu) * 10); }
+      html.reader :is(#rd-first, .rd-poster) .rd-f-tag span::before { content: "\00b7"; margin-right: calc(var(--rd-tu) * 10); }
+      html.reader #rd-first .rd-f-hero {
+        box-sizing: border-box; max-width: 34em; margin: 0 auto;
+        padding: 28px max(20px, env(safe-area-inset-right, 0px)) 40px max(20px, env(safe-area-inset-left, 0px));
+      }
+      html.reader #rd-first .rd-f-hero p { margin: 0; }
+      html.reader #rd-first .rd-f-kicker { font: 600 12px/1.4 var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink2); }
+      html.reader #rd-first .rd-f-title {
+        margin: 10px 0 14px; font: 400 40px/1.1 var(--font-display); font-variation-settings: "opsz" 96, "SOFT" 30;
+        letter-spacing: -0.015em; color: var(--ink); text-wrap: balance;
+      }
+      html.reader #rd-first .rd-f-title em { font-style: italic; color: var(--plasma); }
+      html.reader #rd-first .rd-f-result { font: 500 17px/1.5 var(--font-body); color: var(--ink); }
+      html.reader #rd-first .rd-f-hero .rd-f-by { margin-top: 14px; font: 400 17px/1.5 var(--font-body); color: var(--ink2); }
+      html.reader #rd-first .rd-f-by a {
+        color: var(--ink); font-weight: 600; text-decoration: underline; text-decoration-color: var(--line-strong);
+        text-decoration-thickness: 1px; text-underline-offset: 3px;
+      }
+      html.reader #rd-first .rd-f-date { font: 400 13px/1.6 var(--font-mono); color: var(--ink3); }
+      html.reader #rd-first .rd-f-hero .rd-f-scroll { margin-top: 22px; font: 400 13px/1.5 var(--font-body); color: var(--ink3); }
     </style>
   </head>
   <body>
-    <div id="app"></div>
-    <div id="m-hint" role="note">
-      <span><b>Built for a wide screen.</b> Turn your phone sideways for the full view, then swipe left on the text to move through the talk. A phone version is on its way.</span>
-      <button type="button" aria-label="Dismiss" onclick="this.parentNode.remove()">&times;</button>
+    <div id="rd-first" hidden>
+      <!-- Reader first paint (SPEC 2.3, 4.6): shown before any script only when the gate set html.reader; words from
+           src/reader/identity.js. Structure, geometry and the poster: tools/og/FIRST-PAINT.md. -->
+      <header class="rd-f-bar">
+        <button class="rd-f-label" type="button" aria-label="Contents"><span>01 / 11 · The machine</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2.5 4.5 3.5 3.5 3.5-3.5" /></svg></button>
+        <button class="rd-f-look" type="button" aria-label="Look closer"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" /><path d="m12.6 12.6 4.4 4.4" /></svg></button>
+        <button class="rd-f-xz" type="button" aria-label="About Xiaoxiao Zhouyi"><span>XZ</span></button>
+      </header>
+      <div class="rd-f-win">
+        <img class="rd-f-poster" src="./poster.jpg" width="720" height="670" alt="Illustration of the DIII-D tokamak, the title screen of the talk" loading="lazy" fetchpriority="high" decoding="async" />
+        <script>if (document.documentElement.classList.contains('reader')) document.currentScript.previousElementSibling.loading = 'eager';</script>
+        <span class="rd-f-tag" data-kind="made"><i></i><b>ILLUSTRATION</b><span>stylised machine; plasma shape from EFIT</span></span>
+      </div>
+      <section class="rd-f-hero">
+        <p class="rd-f-kicker">NeurIPS 2026 · Fusion Equilibrium Challenge</p>
+        <h1 class="rd-f-title">Pixel-perfect was <em>not enough</em></h1>
+        <p class="rd-f-result">2nd in Challenge 1 · DIII-D · solo entry</p>
+        <p class="rd-f-by"><a href="https://zhouyixiaoxiao.com" rel="author" data-rd="about">Xiaoxiao Zhouyi</a> · University of Bristol</p>
+        <p class="rd-f-date">Atlanta · 12 December 2026</p>
+        <p class="rd-f-scroll">Scroll to read the talk · 11 scenes · 38 steps · about 12 minutes</p>
+      </section>
     </div>
+    <div id="app"></div>
     <noscript>
       <p style="font: 18px/1.5 system-ui; max-width: 40em; margin: 4em auto; padding: 0 1em">
         This talk is an interactive page and needs JavaScript. The method is described in the report linked from
         github.com/zhouyi-xiaoxiao/fusion-equilibrium-challenge-2026.
+        <br />Xiaoxiao Zhouyi · University of Bristol · <a href="https://zhouyixiaoxiao.com">Personal site</a> ·
+        <a href="https://www.linkedin.com/in/zhouyixiaoxiao/">LinkedIn</a> · <a href="https://github.com/zhouyi-xiaoxiao">GitHub</a> ·
+        <a href="https://github.com/zhouyi-xiaoxiao/fusion-equilibrium-challenge-2026">Code of this entry (MIT licence)</a>
       </p>
     </noscript>
-    <script type="module" src="./app.js"></script>
+    <script type="module" src="./app.js?v=a769eed5"></script>
     <script>
       // opened as a file (double-click from a USB stick): the browser blocks the module script and the page would
       // stay black. After 3 s with nothing drawn, say how to open it.
       setTimeout(function () {
         var app = document.getElementById('app');
-        if (!app || app.firstChild) return;
+        if (!app || app.firstChild || window.__deck || window.__rd) return;
         var file = location.protocol === 'file:';
         app.innerHTML =
           '<p style="font: 500 24px/1.5 system-ui, sans-serif; max-width: 34em; margin: 4em auto; padding: 0 1em">' +
